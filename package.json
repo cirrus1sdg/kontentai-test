@@ -1,0 +1,9 @@
+{
+  "scripts": {
+    "build": "browserify ./src/app.js -o ./assets/js/bundle.js"
+  },
+  "dependencies": {
+    "browserify": "^17.0.0",
+    "normalize.css": "^8.0.1"
+  }
+}
