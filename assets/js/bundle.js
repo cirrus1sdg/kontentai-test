@@ -22039,13 +22039,14 @@ const deliveryClient = KontentDelivery.createDeliveryClient({
 });
 
 async function loadContent(){
-  const response = await deliveryClient.item('landing_page_with_product_listing')
+  console.log('test_gcdc_form_page');
+  const response = await deliveryClient.item('test_gcdc_form_page')
       .toPromise();
 
   console.log(response);
 
-  $("#output").append(`<h2>${response.data.item.elements.title.value}</h2>`);
-  $("#output").append(`${response.data.item.elements.body.value}`);
+  $("#output").append(`<p>${response.data.item.elements.body.value}</p>`);
+  $("#output").append(`${response.data.item.elements.gcdc_form.value}`);
 }
 
 $(document).ready(function(){
