@@ -22043,10 +22043,14 @@ async function loadContent(){
   const response = await deliveryClient.item('test_gcdc_form_page')
       .toPromise();
 
-  console.log(response);
+  $("#appVersion").html("12");
 
-  $("#output").append(`<p>${response.data.item.elements.body.value}</p>`);
+  $("#output").append(`<p class="lead">${response.data.item.elements.body.value}</p>`);
   $("#output").append(`${response.data.item.elements.gcdc_form.value}`);
+
+  console.log("doing stuff");
+
+  setTimeout(function(){gcdc('loadGates')}, 200);
 }
 
 $(document).ready(function(){
