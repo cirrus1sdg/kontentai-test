@@ -17,7 +17,9 @@ async function loadContent(){
   $("#output").append(`<p class="lead">${response.data.item.elements.body.value}</p>`);
   $("#output").append(`${response.data.item.elements.gcdc_form.value}`);
 
-  setTimeout(function(){gcdc('loadGates')}, 200);
+  setTimeout(function(){gcdc('loadGates')}, 400);
+
+  $("#appVersion").html("12");
 }
 
 $(document).ready(function(){
