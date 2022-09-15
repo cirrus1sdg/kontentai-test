@@ -22048,8 +22048,6 @@ async function loadContent(){
   $("#output").append(`<p class="lead">${response.data.item.elements.body.value}</p>`);
   $("#output").append(`${response.data.item.elements.gcdc_form.value}`);
 
-  console.log("doing stuff");
-
   setTimeout(function(){gcdc('loadGates')}, 200);
 }
 
